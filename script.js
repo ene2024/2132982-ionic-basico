@@ -1,17 +1,14 @@
-var mivariable = 5;
-var campoTexto = document.getElementById("miTxt");
-var texto = "";
+var botonL = document.getElementById("button-login");
+var inputL = document.getElementById("input-user");
+var botonR = document.getElementById("button-register");
 
 
-function miFuncion(){
-    texto = campoTexto.value;
-    alert(texto);
-}
+botonL.addEventListener('click', function(){
+  var user = inputL.value;
+  alert("Login correcto " + user);
+});
 
-function borrar(){
-    campoTexto.value = "";
-}
-
-
-miFuncion();
-
+botonR.addEventListener('click', function(){
+  var user = inputL.value;
+  alert("Registro con exito " + user);
+});
