@@ -1,16 +1,12 @@
 .Formulario {
-    width: 50%;
+    width: 100%;
     margin-top: 50px;
     margin-left: 50px;
   }
   
-  #input-user, #input-password{
-    margin-left: 30px;
-    border: none;
-    background-color: beige;
-  }
+ 
   
-  #button-login{
+  #button-add{
     width: 50%;
     color:white;
     background-color: purple;
