@@ -4,24 +4,37 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Laboratorio aplicaciones moviles</title>
   <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
 </head>
 
 <body>
   <div class="Formulario">
 
-    <label for="Usuario"> Usuario </label>
-    <input type="text" id="input-user" name="input-user"><br>
+    <ion-item>
+      <ion-input type="text" label="Articulo" id ="Article" placeholder="Ingresa un articulo"></ion-input>
+    </ion-item>
 
-    <label for="Password">Password </label>
-    <input type="text" id="input-password" name="input-password"><br>
+    <ion-item>
+      <ion-input label="Precio" id="Price" type="number" placeholder="$0"></ion-input>
+    </ion-item>
 
-    <button type="button" id="button-login">Login</button><br>
-    <button type="button" id="button-register">Registrarme</button>
+    <button type="button" id="button-add">Agregar</button><br>
+  </div>
+
+  <div id="total-container">
+  </div>
+  <div id="total-price">
+
+    Total: <span id="totalPrice"></span>
 
   </div>
+
   <script src="script.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
 </body>
 
 </html>

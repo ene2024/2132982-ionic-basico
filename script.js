@@ -1,14 +1,28 @@
-var botonL = document.getElementById("button-login");
-var inputL = document.getElementById("input-user");
-var botonR = document.getElementById("button-register");
+var Article = document.getElementById("Article");
+var Price = document.getElementById("Price");
+var Button = document.getElementById("button-add");
+var totalContainer = document.getElementById("total-container");
+var totalPrice = document.getElementById("total-price");
+var total = 0.0;
 
+document.addEventListener('DOMContentLoaded', function() {
+  Button.addEventListener('click', function(){
+    var precio = parseFloat(Price.value);
+    var articulo = Article.value;
+    total = total + precio;
+    console.log(total);
 
-botonL.addEventListener('click', function(){
-  var user = inputL.value;
-  alert("Login correcto " + user);
-});
+    var newItem = document.createElement("div");
+    newItem.innerHTML = "Artículo: <span>" + articulo+ "</span> Precio: <span>" + precio + "</span>";
 
-botonR.addEventListener('click', function(){
-  var user = inputL.value;
-  alert("Registro con exito " + user);
+    totalContainer.appendChild(newItem);
+
+    totalPrice.textContent = "Total: $" + total.toFixed(2); // Mostrar el total hasta 2 decimales
+
+    // Agregar el nuevo elemento del total al contenedor total-container
+    totalPrice.appendChild(totalElement);
+
+    Price.value = "";
+    Article.value = "";
+  });
 });
