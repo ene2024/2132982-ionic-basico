@@ -19,11 +19,8 @@ export class ListaAlumnosComponent  implements OnInit {
     const actionSheet = await this.actionSheetController.create({
       header: 'Opciones',
       buttons: [{
-        text: 'Compartir',
-        icon: 'share',
-      }, {
-        text: 'Favorito',
-        icon: 'heart',
+        text: 'Eliminar',
+        icon: 'trash',
       }, {
         text: 'Cancelar',
         icon: 'close',
@@ -32,6 +29,7 @@ export class ListaAlumnosComponent  implements OnInit {
     });
     await actionSheet.present();
   }
+  
   
 
 
