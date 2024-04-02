@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-lista-alumnos',
@@ -7,11 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaAlumnosComponent  implements OnInit {
 
-  constructor() { }
+  constructor(public actionSheetController: ActionSheetController) {
+   }
 
   ngOnInit() {}
 
   alumnos : any = ["Carlos", "Ximena", "Alberto", "Eduardo", "Baraba", "Georgina", "Kevin"];
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Opciones',
+      buttons: [{
+        text: 'Compartir',
+        icon: 'share',
+      }, {
+        text: 'Favorito',
+        icon: 'heart',
+      }, {
+        text: 'Cancelar',
+        icon: 'close',
+        role: 'cancel',
+      }]
+    });
+    await actionSheet.present();
+  }
+  
 
 
 }
