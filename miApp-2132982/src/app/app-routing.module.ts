@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ProductosComponent } from './productos/productos.component';
+import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+    path:'productos',
+    component: ProductosComponent
+  },
+  {
+    path:'',
+    redirectTo:'/productos',
+    pathMatch:'full'
+  },
 ];
 @NgModule({
   imports: [

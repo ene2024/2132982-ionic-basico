@@ -10,7 +10,9 @@ export class ProductosComponent  implements OnInit {
 
   constructor(private consulta: ConsultaService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.obtenerProductos();
+  }
 
   productos: any[] = [];
 
