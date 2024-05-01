@@ -12,9 +12,10 @@ import { ProductosComponent } from './productos/productos.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
+import { CamaraComponent } from './camara/camara.component';
 
 @NgModule({
-  declarations: [AppComponent,ListaAlumnosComponent, ProductosComponent],
+  declarations: [AppComponent,ListaAlumnosComponent, ProductosComponent, CamaraComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
