@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FotoServiceService } from '../foto-service.service';
+import { Foto } from 'src/userPhoto';
 
 
 @Component({
@@ -9,7 +10,9 @@ import { FotoServiceService } from '../foto-service.service';
 })
 export class CamaraComponent  implements OnInit {
 
-  constructor(private foto: FotoServiceService) { }
+  constructor(public foto: FotoServiceService) { }
+
+  public fotos: Foto[] = this.foto.fotos;
 
   ngOnInit() {}
 

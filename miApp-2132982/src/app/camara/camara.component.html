@@ -1,1 +1,9 @@
-<ion-button expand="block" (click)="tomarFoto()">Block</ion-button>
+<ion-button expand="block" (click)="tomarFoto()">Abrir camara</ion-button>
+
+<ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let foto of fotos; index as i">
+        <img [src]="foto.webviewPath" alt="">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
